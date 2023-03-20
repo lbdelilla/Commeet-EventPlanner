@@ -122,7 +122,7 @@ export const LeftSideBar = () => {
                                         <i className="fa-icon fa-solid fa-arrow-right-from-bracket"></i><span className="ms-1 d-none d-sm-inline">Cerrar Sesión</span></button>
                                 </li>
                             </ul>
-                            <hr />
+                            {/* <hr /> */}
                         </div>
                         <div className="contacts-div pt-5 d-flex align-items-start">
                             <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start align-items-sm-start">

@@ -5,8 +5,9 @@ import { ViewTitle } from "../component/viewTitle";
 import { useNavigate } from "react-router-dom";
 import { Nextevent } from "../component/nextevent";
 import { CreateEventForm } from "../component/createevent";
+import { Calendar } from "../component/calendar";
 
-import { PrintEventsList } from "../component/printEventsList";
+// import { PrintEventsList } from "../component/printEventsList";
 
 
 export const Private = () => {
@@ -62,7 +63,7 @@ export const Private = () => {
                 {!showCreateEvent ? (
                   <>
                     <Nextevent />
-                    <PrintEventsList />
+                    <Calendar />
                   </>
                 ) : (
                   <CreateEventForm className="create-event-container" />

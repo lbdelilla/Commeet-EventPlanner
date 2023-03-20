@@ -64,7 +64,7 @@ export const Nextevent = () => {
                         </div>
                         <div className="col-sm-3">
                             <p className="p-nextdate mt-3"><strong>{nextEvent.title}</strong></p>
-                            <p className="p-nextdate"><strong>Horario: </strong>{nextEvent.date}</p>
+                            <p className="p-nextdate"><strong>Horario: </strong>{nextEvent.date.slice(0 , 16)}</p>
                         </div>
                         <div className="col-sm-5">
                             <p className="p-nextdate mt-3"><strong>Lugar: </strong>{nextEvent.location}</p>
