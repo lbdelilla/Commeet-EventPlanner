@@ -25,6 +25,7 @@ h2,
   position: relative;
   top: 0;
   background: #667dd2;
+  padding: 0.5em;
   box-shadow: 0px 7px 0px 0px #586db9, 0px 0px 10px 0px rgba(120, 120, 120, 0.4);
 }
 .rg-btn:focus {

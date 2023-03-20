@@ -96,7 +96,7 @@ export const LeftSideBar = () => {
         <div className="left-side-container">
             <div className="row">
                 <div className="col sidebar-column">
-                    <div className="sidebar-column-2 d-flex flex-column align-items-start align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <div className="sidebar-column-2 d-flex flex-column align-items-start align-items-sm-start px-3 pt-2  min-vh-100">
                         <Link to="/">
                             <button className="btn"><h4 className="sidebar-logo-com text-black mb-5">ComMeet</h4></button>
                         </Link>

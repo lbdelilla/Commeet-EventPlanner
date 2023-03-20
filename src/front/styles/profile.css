@@ -33,6 +33,7 @@
     border-radius:4px;
     cursor:pointer;
     transition:all 0.16s;
+    padding: 0.5em;
     position:relative;
     top:0;
     background:#667DD2;
