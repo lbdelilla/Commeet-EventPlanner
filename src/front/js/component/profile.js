@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { ViewTitle } from "./viewTitle";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Toaster, toast } from 'sonner'
+
 
 import "../../styles/profile.css"
 
@@ -48,7 +48,7 @@ export const Profile = () => {
         console.log("this is data img", data)
         setImageSrc(data.secure_url);
         actions.editUserInfo("avatar_url", data.secure_url)
-        toast.success('La imagen ha sido modificada con éxito')
+   
     }
 
     const [fieldStatus, setFieldStatus] = useState({
@@ -86,7 +86,7 @@ export const Profile = () => {
     const handleSave = async (fieldName) => {
         await actions.editUserInfo(fieldName, newValue)
         setFieldStatus({ ...fieldStatus, [fieldName]: false });
-        toast.success(`El perfil ha sido modificada con éxito`)
+        
     }
 
     const formik = useFormik({
@@ -107,7 +107,7 @@ export const Profile = () => {
 
     return (
         <div className="view">
-               <Toaster richColors position="top-right"/>
+             
             <div className="col-3 sidebar-column">
                 <LeftSideBar />
             </div>
