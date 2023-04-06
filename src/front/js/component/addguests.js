@@ -59,7 +59,7 @@ export const AddGuestsToEvent = () => {
       message: `Hola!, ${userInfo.name} te ha invitado al evento ${lastEvent.title} que se realizará el ${lastEvent.date} en ${lastEvent.location}.
       \n¡Esperamos verte allí!
       \n
-      \nPor favor confirma tu asistencia en el siguiente enlace: https://3000-cromanalcai-webapievent-8evfm2s59z0.ws-eu89b.gitpod.io/rsvp/${lastEvent.id}`,
+      \nPor favor confirma tu asistencia en el siguiente enlace: https://3000-lbdelilla-commeeteventp-uj4cxclzx4u.ws-eu93.gitpod.io/rsvp/${lastEvent.id}`,
     };
 
     const servicioID = 'service_yrjx7ri';

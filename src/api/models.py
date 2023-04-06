@@ -74,7 +74,7 @@ class Contacts(db.Model):
     email = db.Column(db.String(120), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     user = db.relationship(User)
-    avatar_url = db.Column(db.String(300), nullable=True, default="https://res.cloudinary.com/dkcoownwg/image/upload/v1677503257/avatar_knpmj6.png" ) 
+    avatar_url = db.Column(db.String(300), nullable=True ) 
     is_active = db.Column(db.Boolean, default=True)
     
 

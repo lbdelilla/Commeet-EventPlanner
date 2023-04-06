@@ -21,7 +21,7 @@ export const Calendar = () => {
     const userEmail = userInfo?.email
     // const userId = userInfo?.id
 
-    let getGuestsEmail = evguest.filter(item => item.email === userEmail);
+    let getGuestsEmail = evguest.filter(item => item.email);
 
     let eventsByGuests = [];
     for (let i = 0; i < eventos.length; i++) {
@@ -39,7 +39,7 @@ export const Calendar = () => {
     futureDate.sort(function(a, b){return new Date(a.date).getTime() - new Date(b.date).getTime()});
      
     let bookedDays = eventsByGuests.map((el => new Date(el.date) > new Date() ? new Date(el.date) : null));
-    const bookedStyle = { color: "red" , fontWeight: "bold" };
+    const bookedStyle = { color: "skyblue" , fontWeight: "bold" };
 
     return (
         <div className='cal-container-div'>
@@ -61,7 +61,7 @@ export const Calendar = () => {
                   {futureDate.map((el, index) => {
                   return (
                     <div key={index}>
-                    <Link to={"/singleevent/" + el.id}>
+                    <Link className='event-info-cal' to={"/singleevent/" + el.id}>
                   <p className='p-event' > Hora: {el.date.slice(11 , 16)} &nbsp;&nbsp;&nbsp; {el.title} &nbsp;&nbsp;&nbsp;  Lugar: {el.location} &nbsp;&nbsp;&nbsp; Ver detalles</p>
                   </Link>
                   </div>

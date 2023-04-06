@@ -142,7 +142,7 @@ export const LeftSideBar = () => {
                                             } else {
                                                 return (
                                                     <li key={index} className="py-1">
-                                                        <img src={contact?.avatar_url ? contact?.avatar_url : "https://res.cloudinary.com/dkcoownwg/image/upload/v1677503257/avatar_knpmj6.png"} width="25" height="25" className="rounded-circle" />
+                                                        <img src={contact?.avatar_url ? contact.avatar_url : "https://res.cloudinary.com/dkcoownwg/image/upload/v1677503257/avatar_knpmj6.png"} width="25" height="25" className="rounded-circle" />
                                                         <span className="contact-name d-none d-sm-inline px-2 ">{contact?.name} </span>
                                                         <i className="fa-icon fa-solid fa-pen-to-square" onClick={() => handleEditContact(contact?.id)}></i>
                                                         <i className="trash-icon fa-regular fa-trash-can" onClick={() => handleDelete(contact?.id)}></i>

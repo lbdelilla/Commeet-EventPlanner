@@ -8,6 +8,11 @@
   flex-direction: row;
 }
 
+.event-info-cal{
+  text-decoration: none;
+  color: black
+}
+
 .day-picker-cal {
   background-color: white;
   border-radius: 10px;
