@@ -12,9 +12,10 @@ import { Calendar } from "../component/calendar";
 
 export const Private = () => {
   const { store, actions } = useContext(Context);
-  const [userData, setUserData] = useState("")
-  const [loading, setLoading] = useState(true)
+  const [userData, setUserData] = useState("");
+  const [loading, setLoading] = useState(true);
   const [showCreateEvent, setShowCreateEvent] = useState(false);
+  const [showCreateButton, setShowCreateButton] = useState(true);
 
   const navigate = useNavigate();
 
@@ -34,7 +35,12 @@ export const Private = () => {
   }, [token, navigate]);
 
   const handleCreateEventClick = () => {
-    setShowCreateEvent(true);
+    if (showCreateEvent) {
+      setShowCreateEvent(false);
+    } else {
+      setShowCreateEvent(true);
+      setShowCreateButton(false);
+    }
   };
 
   return (
@@ -54,11 +60,14 @@ export const Private = () => {
               </div>
               <div className="col">
                 <ViewTitle title="Dashboard" className="dash-title" />
-                <button
-                  className="add-event"
-                  onClick={handleCreateEventClick}
-                >
-                  <i className="fa-solid fa-plus plus-btn"></i>Crear Evento
+                <button className="add-event" onClick={handleCreateEventClick}>
+                  {showCreateButton ? (
+                    <>
+                      <i className="fa-solid fa-plus plus-btn"></i>Crear Evento
+                    </>
+                  ) : (
+                    "Cancelar"
+                  )}
                 </button>
                 {!showCreateEvent ? (
                   <>

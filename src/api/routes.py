@@ -391,12 +391,12 @@ def user_avatar(user_id):
 @api.route('/comments/<int:event_id>', methods=['GET'])
 def getComments(event_id):
     comments = Comments.query.filter(Comments.event_id == int(event_id))
-    return jsonify([{'id': comment.id, 'user_id': comment.user_id, 'content': comment.content} for comment in comments])
+    return jsonify([{'id': comment.id, 'user_id': comment.user_id, 'user_name': comment.user_name, 'content': comment.content} for comment in comments])
     
 @api.route('/comment/<int:event_id>', methods=['POST']) 
 def postComment(event_id):
     body = request.get_json()
-    new_comment = Comments(user_id=body["user_id"], content=body["content"], event_id=body["event_id"] )
+    new_comment = Comments(user_id=body["user_id"], user_name=body["user_name"], content=body["content"], event_id=body["event_id"] )
     db.session.add(new_comment)
     db.session.commit()
     return jsonify(new_comment.serialize()), 200

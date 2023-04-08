@@ -6,13 +6,23 @@ import emailjs from 'emailjs-com';
 
 
 
-
 export const AddGuestsToEvent = () => {
   const { store, actions } = useContext(Context);
+  const [contactCheck, setContactCheck] = useState([])
+ 
   const Navigate = useNavigate()
+  
   const userId = JSON.parse(localStorage.getItem('userId'))
+  
+  
+    useEffect(() => {
+      actions.getAllEvents();
+      actions.getUserContacts();
+    }, []);
+  
 
   let eventsList = store.events;
+  let contactsList = store.userContacts;
 
   let evListOrd = eventsList.sort(function (a, b) { return a.id - b.id });
   let lastEvent = evListOrd[evListOrd.length - 1];
@@ -24,17 +34,12 @@ export const AddGuestsToEvent = () => {
     }
   }
 
-  let contactsList = store.userContacts;
-
-  const [contactCheck, setContactCheck] = useState([])
-  console.log(contactCheck)
 
   const copyCheck = [];
   for (let i = 0; i < contactCheck.length; i++) {
     copyCheck.push({ email: contactCheck[i].email, user_id: userId.id, event_id: lastEvId, contact_id: contactCheck[i].id })
   };
-  console.log(copyCheck);
-
+ 
 
   const handleChexbox = (e) => {
     if (e.target.checked === true) {
@@ -83,10 +88,6 @@ export const AddGuestsToEvent = () => {
    
   }
 
-
-  useEffect(() => {
-    actions.getAllEvents();
-  }, []);
 
 
   return (

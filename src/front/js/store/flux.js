@@ -205,6 +205,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					const response = await fetch(`${BACKEND_URL}/api/users/${userId.id}`, requestOptions)
 					const user = await response.json();
 					setStore({ ...getStore(), user })
+					return user
 				} catch (error) {
 					console.log(error);
 				};
@@ -418,7 +419,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log(error);
 				}
 			},
-			postComment: async (userId, content, eventId) => {
+			postComment: async (userId, userName, content, eventId) => {
+
+				console.log(userId, userName, content, eventId)
 				const requestOptions = {
 					method: "POST",
 					headers: {
@@ -426,10 +429,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					},
 					body: JSON.stringify({
 						"user_id": userId,
+						"user_name": userName,
 						"content": content,
 						"event_id": eventId,
 					})
 				}
+				console.log(requestOptions)
 				try {
 					const res = await fetch(`${BACKEND_URL}/api/comment/${userId}`, requestOptions);
 					console.log("this is res", res);
@@ -455,8 +460,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				try {
 					const res = await fetch(`${BACKEND_URL}/api/comments/${eventId}`, requestOptions);
 					const data = await res.json();
-
+					console.log(data)
 					setStore({ ...getStore(), comments: data });
+					return data;
 				} catch (error) {
 					console.log(error);
 				}

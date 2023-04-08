@@ -23,7 +23,6 @@ export const CreateEventForm = () => {
 
   let dateTime = listDate + " " + listTime + ":00"
 
-  console.log(listLati, listLongi, typeof (listLongi))
 
   const navigate = useNavigate();
 
@@ -114,6 +113,8 @@ export const CreateEventForm = () => {
       document.body.removeChild(script);
     }
   }, [apiKey]);
+
+  
   return (
     <>
       {showCreateEventForm && (

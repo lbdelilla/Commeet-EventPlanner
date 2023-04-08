@@ -125,6 +125,7 @@ class Comments(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     user = db.relationship(User)
+    user_name = content = db.Column(db.String(255), nullable=False)
     event_id =  db.Column(db.Integer, db.ForeignKey('events.id'))
     event = db.relationship(Events)
     content = db.Column(db.String(255), nullable=False)
@@ -138,6 +139,7 @@ class Comments(db.Model):
         return {
         "id": self.id,
         "user_id": self.user_id,
+        "user_name": self.user_name,
         "event_id": self.event_id,
         "content": self.content,
         "is_active": self.is_active
