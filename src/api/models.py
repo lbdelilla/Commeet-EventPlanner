@@ -125,7 +125,7 @@ class Comments(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     user = db.relationship(User)
-    user_name = content = db.Column(db.String(255), nullable=False)
+    user_name = content = db.Column(db.String(255), nullable=True)
     event_id =  db.Column(db.Integer, db.ForeignKey('events.id'))
     event = db.relationship(Events)
     content = db.Column(db.String(255), nullable=False)
