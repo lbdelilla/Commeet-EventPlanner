@@ -23,7 +23,7 @@ export const CreateEventForm = () => {
 
   let dateTime = listDate + " " + listTime + ":00"
 
-  console.log(listLati, typeof (listLongi))
+  console.log(listLati, listLongi, typeof (listLongi))
 
   const navigate = useNavigate();
 
