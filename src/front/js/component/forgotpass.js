@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import { Context } from "../store/appContext";
 import "../../styles/login.css";
 import emailjs from 'emailjs-com';
 
@@ -24,7 +23,7 @@ export const ForgotPass = () => {
             
             \nSi solicitaste el restablecimiento de la contraseña, haz clic en el siguiente enlace para continuar:
             
-            \nhttps://3000-cromanalcai-webapievent-8evfm2s59z0.ws-eu89b.gitpod.io//set-new-pass/${userId}
+            \nhttps://3000-lbdelilla-commeeteventp-uj4cxclzx4u.ws-eu93.gitpod.io/set-new-pass/${userId}
             
             \nEste enlace es válido solo por un tiempo limitado, así que asegúrate de restablecer tu contraseña pronto. Si tienes problemas para restablecer tu contraseña, no dudes en ponerte en contacto con nuestro equipo de soporte.
             
@@ -66,7 +65,6 @@ export const ForgotPass = () => {
                 return false;
             }
             const data = await res.json();
-            console.log(data)
             sendEmail(data.email, data.user_id)
 
         } catch (error) {
@@ -85,7 +83,7 @@ export const ForgotPass = () => {
                     <input className='input-forgot-pass form-control my-2' type="email" value={emailFP} onChange={handleEmailChange} />
                 </label>
                 <br />
-                <p>Si estás registrado, recibirás un correo electrónico con un enlace y un token que deberás ingresar para recuperar tu contraseña. </p>
+                <p>Si estás registrado, recibirás un correo electrónico con un enlace al que deberás ingresar para recuperar tu contraseña. </p>
                 <button type='submit' className='forgot-pass-btn' onClick={() => { getUserChecked() }}>Enviar</button>
             </div>
         </div>

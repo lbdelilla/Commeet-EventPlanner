@@ -15,13 +15,9 @@ export const Nextevent = () => {
     const userInfo = store.user?.result
     const userEmail = userInfo?.email
     const userId = userInfo?.id
-    console.log(evguest)
 
     let eventsOfUser = eventos.filter(item => item.user_id === userId) ///
-    console.log(eventsOfUser)
-    // let getGuestsEmail = evguest.filter(item => item.email === userEmail);
     let getGuestsEmail = evguest.filter(item => item.email);
-    console.log("NextEvent2", getGuestsEmail)
 
     let eventsByGuests = [];
     for (let i = 0; i < eventos.length; i++) {
@@ -31,16 +27,13 @@ export const Nextevent = () => {
             }
         }
     }
-    console.log(eventsByGuests)
 
     let actualTime = new Date().getTime();
     let futureDate = eventsByGuests.filter(item => new Date(item.date).getTime() > actualTime);
-    console.log("actual",actualTime,"futureDate", futureDate)
 
     
     let futureEvents = [...eventsOfUser, ...futureDate];///
     let futureEventsFiltered = futureEvents.filter(item => new Date(item.date).getTime() > actualTime);///
-    console.log("futureEvents",futureEvents,"filtered", futureEventsFiltered)
     let arrayData = [];
     for (let j = 0; j < futureEventsFiltered.length; j++) {
         arrayData.push(new Date(futureEventsFiltered[j].date).getTime());
@@ -48,7 +41,6 @@ export const Nextevent = () => {
 
     let minDate = Math.min(...arrayData);
     let nextEvent = futureEventsFiltered.filter(item => new Date(item.date).getTime() === minDate)[0];
-    console.log("nextEvent", nextEvent, "minDate", minDate) 
     // let arrayData = [];
     // for (let j = 0; j < futureDate.length; j++) {
     //     arrayData.push(new Date(futureDate[j].date).getTime());

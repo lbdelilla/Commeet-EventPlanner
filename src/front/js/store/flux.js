@@ -82,7 +82,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return false;
 					}
 					const data = await resp.json();
-					console.log(data)
+					
 					return true;
 				}
 				catch (error) {
@@ -251,7 +251,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 							contact.avatar = `${BACKEND_URL}${avatars[contact.email]}`;
 						}
 						setStore({ ...getStore(), contactsAvatars: contacts });
-						console.log("CA", contactsAvatars)
 					});
 
 
@@ -272,7 +271,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				try {
 					const response = await fetch(`${BACKEND_URL}/api/contacts/${contactId}`, requestOptions);
 					const data = await response.json();
-					console.log(data);
+					// console.log(data);
 
 					setStore({
 						...getStore(),
@@ -294,7 +293,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					...user,
 					[field]: updatedValue
 				};
-				console.log(updatedUser)
 				try {
 
 					const response = await fetch(`${BACKEND_URL}/api/users/${userId.id}`, {
@@ -326,7 +324,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					...user,
 					"password": updatedPassword
 				};
-				console.log(updatedUser)
 				try {
 
 					const updatedUserInfo = await fetch(`${BACKEND_URL}/api/users/${userId}`, {
@@ -360,7 +357,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				try {
 					const response = await fetch(`${BACKEND_URL}/api/users/${userId.id}`, requestOptions);
 					const data = await response.json();
-					console.log(data);
+					// console.log(data);
 					const token = localStorage.removeItem("token");
 					const userId = localStorage.removeItem("userId")
 
@@ -420,8 +417,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 			postComment: async (userId, userName, content, eventId) => {
-
-				console.log(userId, userName, content, eventId)
 				const requestOptions = {
 					method: "POST",
 					headers: {
@@ -434,10 +429,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"event_id": eventId,
 					})
 				}
-				console.log(requestOptions)
 				try {
 					const res = await fetch(`${BACKEND_URL}/api/comment/${userId}`, requestOptions);
-					console.log("this is res", res);
 					if (res.status !== 200) {
 						alert("An error has occurred while adding the new comment");
 						return false;
@@ -453,14 +446,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 			getComments: async (eventId) => {
-				console.log(eventId)
 				const requestOptions = {
 					method: "GET",
 				};
 				try {
 					const res = await fetch(`${BACKEND_URL}/api/comments/${eventId}`, requestOptions);
 					const data = await res.json();
-					console.log(data)
+					// console.log(data)
 					setStore({ ...getStore(), comments: data });
 					return data;
 				} catch (error) {
@@ -483,8 +475,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			editEventInfo: async (eventId, field, value) => {
 				const updatedEvent = { [field]: value };
-				console.log("updatedevent", updatedEvent, eventId)
-
 				try {
 					const response = await fetch(`${BACKEND_URL}/api/events/${eventId}`, {
 						method: "PUT",
@@ -510,7 +500,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 			sendNewEvent: async (newEvent) => {
-				console.log(newEvent)
 				const requestOptions = {
 					method: "POST",
 					headers: {
@@ -548,10 +537,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 							headers: { "Content-Type": "application/json" },
 						};
-						console.log(request);
+					
 						const response = await fetch(url, request);
 						const result = await response.json();
-						console.log(result);
+						// console.log(result);
 					} catch (error) {
 						console.log(error);
 					}

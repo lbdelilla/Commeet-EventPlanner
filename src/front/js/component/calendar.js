@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
-
 import { format } from 'date-fns';
 import { DayPicker } from 'react-day-picker';
 import { es } from 'date-fns/locale';
-
 import 'react-day-picker/dist/style.css';
 import '../../styles/calendar.css'
 
@@ -25,20 +23,9 @@ export const Calendar = () => {
   const evguest = store.eventguests;
   const userInfo = store.user?.result
   const userEmail = userInfo?.email
-  // const userId = userInfo?.id
 
-  console.log(evguest)
   let getGuestsEmail = evguest.filter(item => item.email);
 
-
-  // let eventsByGuests = [];
-  // for (let i = 0; i < eventos.length; i++) {
-  //   for (let j = 0; j < getGuestsEmail.length; j++) {
-  //     if (eventos[i].id === getGuestsEmail[j].event_id) {
-  //       eventsByGuests.push(eventos[i]);
-  //     }
-  //   }
-  // }
 
   let eventsByGuests = [];
   let uniqueEventIds = new Set();
@@ -54,10 +41,8 @@ export const Calendar = () => {
 
   let onlyDay = format(selectedDay, 'PP');
   let formatDay = format(selectedDay, 'PPPP', { locale: es });
-  console.log(eventsByGuests)
   let futureDate = eventsByGuests.filter(item => format(new Date(item.date), 'PP') == onlyDay && new Date(item.date).getTime() > new Date().getTime());
   futureDate.sort(function (a, b) { return new Date(a.date).getTime() - new Date(b.date).getTime() });
-  console.log(futureDate)
   let bookedDays = eventsByGuests.map((el => new Date(el.date) > new Date() ? new Date(el.date) : null));
   const bookedStyle = { color: "skyblue", fontWeight: "bold" };
 

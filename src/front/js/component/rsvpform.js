@@ -35,7 +35,6 @@ export const RsvpForm = () => {
       rsvp_status: rsvpResponse,
       event_id: parseInt(params.theid)
     };
-    console.log(formData)
     actions.updateRSVP(formData)
     setShowConfirmation(true);
 

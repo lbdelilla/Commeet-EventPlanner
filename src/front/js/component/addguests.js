@@ -10,15 +10,14 @@ export const AddGuestsToEvent = () => {
   const { store, actions } = useContext(Context);
   const [contactCheck, setContactCheck] = useState([])
  
-  const Navigate = useNavigate()
+  const navigate = useNavigate()
   
   const userId = JSON.parse(localStorage.getItem('userId'))
   
-  
-    useEffect(() => {
-      actions.getAllEvents();
-      actions.getUserContacts();
-    }, []);
+  useEffect(() => {
+    actions.getAllEvents();
+    actions.getUserContacts();
+  }, []);
   
 
   let eventsList = store.events;
@@ -53,7 +52,7 @@ export const AddGuestsToEvent = () => {
   }
 
 
-  const sendInvitationToGuests = (invitados) => {
+  const sendInvitationToGuests = async (invitados) => {
 
     const userInfo = store.user.result
 
@@ -79,15 +78,13 @@ export const AddGuestsToEvent = () => {
       });
   }
 
-
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
     e.preventDefault();
     actions.sendNewEventGuess(copyCheck);
-    sendInvitationToGuests(contactCheck)
-    Navigate(`/singleevent/${lastEvId} `)
+    await sendInvitationToGuests(contactCheck);
+    navigate(`/singleevent/${lastEvId} `);
    
   }
-
 
 
   return (

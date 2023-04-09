@@ -12,8 +12,12 @@ export const LeftSideBar = () => {
     const [updatedName, setUpdatedName] = useState();
     const [updatedEmail, setUpdatedEmail] = useState();
     const [avatars, setAvatars] = useState({});
-
-
+    
+    useEffect(() => {
+        actions.getUserContacts();
+        actions.getUserInfo()
+    }, [])
+    
     const handleEditContact = (contactId) => {
         setEditingContactId(contactId);
     }
@@ -33,10 +37,6 @@ export const LeftSideBar = () => {
     const userContacts = store.userContacts
     const user = store.user.result
 
-    useEffect(() => {
-        actions.getUserContacts();
-        actions.getUserInfo()
-    }, [])
 
     const handleClick = () => {
         actions.logout()
@@ -46,13 +46,12 @@ export const LeftSideBar = () => {
     const handleDelete = (contactId) => {
         actions.deleteContact(contactId)
         toast.success('El contacto ha sido eliminado correctamente')
-        console.log(contactId)
+       
     }
 
     const getAvatars = async () => {
         await actions.getAllUsers();
         const users = store.allUsers;
-        console.log("trae los usuarios", users)
         const avatars = {};
         users?.forEach(user => {
             if (user.avatar_url) {
@@ -81,9 +80,7 @@ export const LeftSideBar = () => {
     const fetchUserAvatars = async () => {
         const avatars = await getAvatars();
         const userContacts = store.userContacts;
-        console.log("userCont", userContacts)
         const userAvatars = await contactIsUserWAvatar(userContacts, avatars);
-        console.log("contacts:", userContacts, "avatars", userAvatars)
         setAvatars(userAvatars);
     };
 

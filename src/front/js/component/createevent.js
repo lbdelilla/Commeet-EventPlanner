@@ -53,7 +53,6 @@ export const CreateEventForm = () => {
     });
 
     const data = await response.json();
-    console.log("this is data img", data)
     setImageSrc(data.secure_url);
 
     const objNewEvent = {
@@ -99,7 +98,6 @@ export const CreateEventForm = () => {
               setLongi(results[0].geometry.location.lat())
               setLati(results[0].geometry.location.lng())
 
-              console.log(`Latitud: ${results[0].geometry.location.lat()}, Longitud: ${results[0].geometry.location.lng()}`);
             } else {
               console.error("No se pudo obtener la ubicación para la dirección especificada");
             }

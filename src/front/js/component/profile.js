@@ -45,7 +45,6 @@ export const Profile = () => {
         });
 
         const data = await response.json();
-        console.log("this is data img", data)
         setImageSrc(data.secure_url);
         actions.editUserInfo("avatar_url", data.secure_url)
    
@@ -101,7 +100,6 @@ export const Profile = () => {
         onSubmit: (values) => {
             const fieldName = "password"
             actions.editUserInfo(fieldName, values.typePasswordX);
-            console.log(fieldName, values.typePasswordX)
         },
     });
 
