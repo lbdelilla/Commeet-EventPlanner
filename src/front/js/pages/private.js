@@ -36,6 +36,7 @@ export const Private = () => {
 
   const handleCreateEventClick = () => {
     if (showCreateEvent) {
+      setShowCreateButton(true);
       setShowCreateEvent(false);
     } else {
       setShowCreateEvent(true);
