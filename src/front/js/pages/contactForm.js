@@ -39,14 +39,14 @@ export const ContactForm = () => {
     return (
         <>
             <Navbar />
-            <section className="vh-100 bg">
+            <section className="vh-100 bg contact-form-sec">
                 <form ref={form} onSubmit={sendEmail}>
                     <div className="container h-100">
                         <div className="row d-flex justify-content-center align-items-center h-100">
                             <div className="col-12 col-md-10 col-lg-8 col-xl-8">
                                 <div className="card">
                                     <div className="card-body px-5 pt-5  text-start">
-                                        <div className="row row-cols-2 ">
+                                        <div className="row row-cols-1 row-cols-md-2 ">
                                             <div className="mb-md-5 mt-md-2">
                                                 <h1 className="title pb-2">Contáctanos</h1>
                                                 <h6 className="sub-title mb-2 pb-4">¿En qué podemos ayudarte? </h6>
@@ -86,11 +86,11 @@ export const ContactForm = () => {
                                                 </button>
 
                                             </div>
-                                            <div className="w-50 p-3 text-start">
+                                            <div className="col-md-6 col-lg-6">
                                                 <img className="contact-img w-100 p-1" src={contact} alt="contact illustration" />
-                                                <p className="contact-info ps-5 ms-5 mb-0 mt-5"><i className="fa-solid-c fa-solid fa-location-dot"></i> 123, Madrid, España</p> <br />
-                                                <p className="contact-info ps-5 ms-5 mb-0" ><i className="fa-solid-c fa-solid fa-phone"></i>911 123 456</p> <br />
-                                                <p className="contact-info ps-5 ms-5"><i className="fa-solid-c fa-solid fa-envelope"></i>info@commeet.com</p>
+                                                <p className="contact-info ms-5 mb-0 mt-5"><i className="fa-solid-c fa-solid fa-location-dot"></i> 123, Madrid, España</p> <br />
+                                                <p className="contact-info ms-5 mb-0" ><i className="fa-solid-c fa-solid fa-phone"></i>911 123 456</p> <br />
+                                                <p className="contact-info  ms-5"><i className="fa-solid-c fa-solid fa-envelope"></i>info@commeet.com</p>
                                             </div>
                                         </div>
                                     </div>
