@@ -23,7 +23,7 @@ export const ForgotPass = () => {
             
             \nSi solicitaste el restablecimiento de la contraseña, haz clic en el siguiente enlace para continuar:
             
-            \nhttps://3000-lbdelilla-commeeteventp-uj4cxclzx4u.ws-eu93.gitpod.io/set-new-pass/${userId}
+            \nhttps://sample-service-name-r5bf.onrender.com/set-new-pass/${userId}
             
             \nEste enlace es válido solo por un tiempo limitado, así que asegúrate de restablecer tu contraseña pronto. Si tienes problemas para restablecer tu contraseña, no dudes en ponerte en contacto con nuestro equipo de soporte.
             

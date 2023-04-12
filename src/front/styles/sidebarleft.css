@@ -130,3 +130,10 @@
     margin-bottom: 2em;
     font-family: 'Merienda One', cursive;
 }
+
+@media screen and (max-width: 767px) {
+    .sidebar-logo-com {
+      display: none;
+    }
+ 
+  }
