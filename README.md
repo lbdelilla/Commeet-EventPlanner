@@ -1,99 +1,61 @@
-# WebApp boilerplate with React JS and Flask API
+# ComMeet - Your event planner
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello.git)
+Do you get stressed every time you have to plan an event and find yourself needing to create WhatsApp groups to keep everyone updated? We have the perfect solution for you! With ComMeet, you can manage your contacts, send invitations, and get attendance confirmations (RSVP).
 
-> Documentation: https://start.4geeksacademy.com/
+Plus, you can chat directly with your guests on the platform, avoiding the need to create multiple chat groups. Let our event planner help you organize your events easily and stress-free!. 
 
-<p align="center">
-<a href="https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b"><img src="https://github.com/4GeeksAcademy/flask-rest-hello/blob/main/docs/assets/how-to.png?raw=true?raw=true" /></a>
-</p>
 
-- React.js front end and python/flask backend for your web application.
-- Extensive documentation [here](https://start.4geeksacademy.com/).
-- Integrated with Pipenv for package managing.
-- Fast deloyment to heroku [in just a few steps here](https://start.4geeksacademy.com/backend/deploy-heroku-posgres).
-- Use of .env file.
-- SQLAlchemy integration for database abstraction.
+## Authors
 
-### Styles
+- [@lbdelilla](https://www.github.com/lbdelilla)
+- [@juanmism](https://github.com/juanmism)
 
-You can update the `styles/index.scss` or create new `.scss` files inside `styles/` and import them into your current scss or js files depending on your needs.
 
-### Components
+## Documentation
 
-Add more files into your `./src/js/components` or styles folder as you need them and import them into your current files as needed.
+- [React Js](https://es.react.dev/)
 
-💡Note: There is an example using the Context API inside `views/demo.js`;
+- [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
-### Views (Components)
+- [Flask & SqlAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/3.0.x/)
 
-Add more files into your `./src/js/views` and import them in `./src/js/layout.jsx`.
+- [Python](https://www.python.org/doc/)
 
-### Context
+## API and Libraries Documentation
 
-This boilerplate comes with a centralized general Context API. The file `./src/js/store/flux.js` has a base structure for the store, we encourage you to change it and adapt it to your needs.
+- [Cloudinary](https://cloudinary.com/)
 
-React Context [docs](https://reactjs.org/docs/context.html)
-BreathCode Lesson [view](https://content.breatheco.de/lesson/react-hooks-explained)
+- [JWT](https://jwt.io/introduction/)
 
-The `Provider` is already set. You can consume from any component using the useContext hook to get the `store` and `actions` from the Context. Check `/views/demo.js` to see a demo.
+- [BCRYPT](https://www.npmjs.com/package/bcrypt)
 
-```jsx
-import { Context } from "../store/appContext";
-const MyComponentSuper = () => {
-    //here you use useContext to get store and actions
-    const { store, actions } = useContext(Context);
-    return <div>{/* you can use your actions or store inside the html */}</div>;
-};
+- [EmailJS](https://www.emailjs.com/docs/)
+
+- [Formik](https://formik.org/docs/)
+
+- [LeafletJS](https://leafletjs.com/)
+
+
+## Installation
+
+Install *FRONTEND* with npm
+
+```bash
+  npm install
+  npm run start 
+```
+    
+Install *BACKEND* with npm
+
+```bash
+  pipenv install
+  pipenv shell
+  pipenv run start 
 ```
 
-### Back-End Manual Installation:
+## Changes in Models 
 
-It is recomended to install the backend first, make sure you have Python 3.8, Pipenv and a database engine (Posgress recomended)
-
-1. Install the python packages: `$ pipenv install`
-2. Create a .env file based on the .env.example: `$ cp .env.example .env`
-3. Install your database engine and create your database, depending on your database you have to create a DATABASE_URL variable with one of the possible values, make sure you replace the valudes with your database information:
-
-| Engine    | DATABASE_URL                                        |
-| --------- | --------------------------------------------------- |
-| SQLite    | sqlite:////test.db                                  |
-| MySQL     | mysql://username:password@localhost:port/example    |
-| Postgress | postgres://username:password@localhost:5432/example |
-
-4. Migrate the migrations: `$ pipenv run migrate` (skip if you have not made changes to the models on the `./src/api/models.py`)
-5. Run the migrations: `$ pipenv run upgrade`
-6. Run the application: `$ pipenv run start`
-
-### Backend Populate Table Users
-
-To insert test users in the database execute the following command:
-
-```sh
-$ flask insert-test-users 5
+```bash
+  pipenv run migrate
+  pipenv run upgrade
 ```
-
-And you will see the following message:
-
-```
-  Creating test users
-  test_user1@test.com created.
-  test_user2@test.com created.
-  test_user3@test.com created.
-  test_user4@test.com created.
-  test_user5@test.com created.
-  Users created successfully!
-```
-
-To update with all yours tables you can edit the file app.py and go to the line 80 to insert the code to populate others tables
-
-### Front-End Manual Installation:
-
--   Make sure you are using node version 14+ and that you have already successfully installed and runned the backend.
-
-1. Install the packages: `$ npm install`
-2. Start coding! start the webpack dev server `$ npm run start`
-
-## Publish your website!
-
-This boilerplate it's 100% read to deploy with Render.com and Heroku in a matter of minutes. Please read the [official documentation about it](https://start.4geeksacademy.com/deploy).
