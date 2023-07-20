@@ -73,10 +73,25 @@
 		]
 	},
 	"dependencies": {
+		"@cloudinary/url-gen": "^1.9.1",
+		"axios": "^1.3.4",
+		"bootstrap-icons": "^1.10.3",
+		"cities-list": "^1.0.3",
+		"cloudinary-react": "^1.8.1",
+		"countries-cities": "^0.0.11",
+		"countries-list": "^2.6.1",
+		"crypto-js": "^4.1.1",
+		"date-fns": "^2.29.3",
+		"emailjs-com": "^3.2.0",
+		"formik": "^2.2.9",
+		"leaflet": "^1.9.3",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
+		"react-day-picker": "^8.6.0",
 		"react-dom": "^16.8.4",
 		"react-polyfills": "0.0.1",
-		"react-router-dom": "^6.3.0"
+		"react-router-dom": "^6.3.0",
+		"reactstrap": "^9.1.6",
+		"yup": "^1.0.0"
 	}
 }

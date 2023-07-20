@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&family=Merienda+One&family=Puritan:wght@400;700&display=swap');
+
+
+p{
+    font-family: 'Puritan', sans-serif;
+    font-size:small;
+}
+
+h6{
+    font-weight: bold;
+    color: #66B3D2;
+    font-family: 'Puritan', sans-serif;
+}
+
+.logo {
+    font-family: 'Merienda One', cursive;
+    font-size: x-large;
+}
+
+.link:hover{
+    color: #ACDBEE;
+}
+
+.fa-brands:hover{
+    color: white;
+    
+}
+
+.fa-brands{
+    color: #38A2CD;
+    font-size: medium;
+ 
+}
+
+.trademark{
+    font-size: smaller;
+    padding-top: 15px;
+}
+
+footer{
+    
+    background-color: #F1EEEE;
+}
+
+.box{
+    background-color: #ACDBEE;
+    width:fit-content;
+    padding: 0px;
+    border-radius: 50px;
+    margin: 0px 10px 0px 3px;
+    box-shadow: 2px 1px 3px 0px lightgrey;
+    
+}
+
+@media (min-width: 1400px){
+    .left-div{
+        padding: 0px;
+        margin-left: 5em;
+    }
+    
+    .right-div{
+        margin: 4em 5em 0 0;
+    }
+    
+    .sm-div{
+        padding: 1.3em 1.5em 0em 10em ;
+    }
+    
+}
+
+
+@media (max-width: 575px) {
+    .left-div{
+        margin:auto;
+    }
+
+    .right-div{
+        margin-top: 1em;
+    }
+
+    .sm-div{
+        padding: 0px;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    hr{
+        display: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 770px) {
+    .left-div{
+        margin: 0px;
+    }
+    .center-div{
+        margin-left: 2em;
+    }
+    .right-div{
+        margin: 0px;
+        padding-top: 4.5em;
+        
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+    .sm-div{
+        padding: 5px;
+        
+    }
+   
+}

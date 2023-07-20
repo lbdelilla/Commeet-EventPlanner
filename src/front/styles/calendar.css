@@ -1,0 +1,34 @@
+.numEvent {
+  color: rgb(0, 0, 0);
+  font-size: large;
+}
+
+.cal-container-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.event-info-cal{
+  text-decoration: none;
+  color: black
+}
+
+.day-picker-cal {
+  background-color: white;
+  border-radius: 10px;
+  width: 23em;
+  height: fit-content;
+  margin: 1em 0 0 3.6em;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.next-events {
+  background-color: white;
+  border-radius: 10px;
+  width: 23em;
+  height: fit-content;
+  margin: 1em 0 0 3.6em;
+  padding: 1em;
+}

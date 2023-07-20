@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda&family=Merienda+One&family=Puritan:wght@400;700&display=swap");
+
+.title-login,
+.lg-input, .label-forgot-pass {
+  font-family: "Puritan", sans-serif;
+
+}
+
+.bg {
+  background-color: #f1eeee;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: -7px 7px 11px 1px rgba(0, 0, 0, 0.25);
+}
+
+.lg-btn, .forgot-pass-btn {
+  font-family: "Puritan", sans-serif;
+  font-size: large;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.16s;
+  position: relative;
+  top: 0;
+  background: #667dd2;
+  padding: 0.5em;
+  box-shadow: 0px 7px 0px 0px #586db9, 0px 0px 10px 0px rgba(120, 120, 120, 0.4);
+}
+.lg-btn:focus, .forgot-pass-btn:focus {
+  outline: none;
+}
+.lg-btn:active, .forgot-pass-btn:active {
+  top: 5px;
+  box-shadow: 0px 3px 0px 0px #586db9;
+}
+
+.forgot-pass-btn{
+  padding: 0.3em 1em 0.3em 1em;
+}
+
+.title-login {
+  font-family: "Merienda", cursive;
+  font-size: 40px;
+  color: #667dd2;
+}
+
+::placeholder {
+  color: #65666a;
+}
+
+.lg-input, .lg-input-pass, .input-forgot-pass {
+  box-shadow: -7px 7px 11px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border-style: none;
+  border-bottom-style: solid;
+  border-bottom-color: #667dd2;
+  border-bottom-width: 3px;
+  margin-right: 0px;
+}
+
+.lg-input{
+  width: 16em;
+}
+
+.lg-input-pass{
+  width: 18em;
+}
+
+.input-forgot-pass{
+  width: 20em;
+}
+.reg-link, .forgot-pass-link {
+  text-decoration: none;
+  font-family: "Puritan", sans-serif;
+  font-size: small;
+}
+
+.showPass{
+  margin-top: 15px !important;
+}

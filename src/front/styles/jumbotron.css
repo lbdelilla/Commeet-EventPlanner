@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&family=Merienda+One&family=Puritan:wght@400;700&display=swap');
+
+.bg{
+    background-color: #F1EEEE;
+}
+
+
+.start-btn{
+  font-family: 'Puritan', sans-serif;
+  font-size: large;
+  padding: 3px;
+  color: white;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+  transition:all 0.16s;
+  position:relative;
+  top:0;
+  background:#667DD2;
+  box-shadow:0px 7px 0px 0px #586db9,
+    0px 0px 10px 0px rgba(120, 120, 120, 0.4);
+}
+.start-btn:focus{
+  outline:none;
+}
+.start-btn:active{
+  top:5px;
+  box-shadow: 0px 3px 0px 0px #586db9;
+}
+
+.arrow {
+    padding: 0px 10px 0px 10px;
+    font-size: medium;
+    color: white;
+}
+
+.hero-text {
+    font-size:xx-large;
+    font-family: 'Puritan', sans-serif;
+}
+.hero-subtext {
+    font-size: medium;
+}
+
+.logo-brand{
+    font-family: 'Merienda', cursive;
+}
+
+.d-block {
+    filter: drop-shadow(15px 15px 0px #667DD2);
+    padding: 0 2em 1em 0;
+    
+}
+
+.hero{
+  padding-top: 2em;
+}
+
+@media (min-width: 992px) {
+  section{
+    padding: 4em 0 4em 0;
+  }
+ 
+}
+
+@media (max-width: 575px) {
+  .hero-imgs{
+    margin: 0em 1.5em 1em 1.5em ;
+  }
+  .hero-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-text{
+    text-align: center;
+  }
+  .hero-subtext{
+    text-align: center;
+  }
+  .button-div{
+   justify-content: center;
+  }
+  }
+
+  @media (min-width: 576px) and (max-width:992px)  {
+    
+    .hero-content{
+        width: 50%;
+    }
+
+    .hero-imgs{
+        width: 50%;
+        height: 50%;   
+    }
+    .container {
+        height: 50%;
+    }
+    section{
+    
+      padding: 2em 0 1em 0;
+    }
+    
+  }

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&family=Merienda+One&family=Puritan:wght@400;700&display=swap');
+
+.view-title-container{
+    width: 50em;
+    height: 4em;
+    background-color: white;
+    border-radius: 0 0 16px 16px;
+    margin-left: 3.6em;
+    display: flex;
+}
+
+.view-title {
+    color: #667DD2;
+    font-family: 'Puritan', sans-serif;
+    font-weight: 700;
+    font-size: large;
+    text-align: center;
+    padding: 1em 1em 1em 1em;
+}
+
+.dash-container{
+    display: flex;
+    flex-direction: row;
+    background-color: #F1EEEE;
+}
+
+.column{
+    width: 19.5%;
+}
+
+.add-event{
+  font-family: 'Puritan', sans-serif;
+  font-size: large;
+  padding: 5px 13px 5px 13px ;
+  color: white;
+  margin: 0.5em 0 0.1em 60%;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+  transition:all 0.16s;
+  position:relative;
+  top:0;
+  background:#667DD2;
+  box-shadow:0px 7px 0px 0px #586db9,
+    0px 0px 10px 0px rgba(120, 120, 120, 0.4);
+}
+.add-event:focus{
+  outline:none;
+}
+
+.add-event:active{
+  top:5px;
+  box-shadow: 0px 3px 0px 0px #586db9;
+}
+
+
+.plus-btn{
+    font-size: small;
+    padding-right: 0.5em;
+}
+
+div.spinner-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  #container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  @keyframes animation {
+    0% {
+      stroke-dasharray: 1 98;
+      stroke-dashoffset: -105;
+    }
+    50% {
+      stroke-dasharray: 80 10;
+      stroke-dashoffset: -160;
+    }
+    100% {
+      stroke-dasharray: 1 98;
+      stroke-dashoffset: -300;
+    }
+  }
+  
+  #spinner {
+    transform-origin: center;
+    animation-name: animation;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier;
+    animation-iteration-count: infinite;
+    fill: transparent;
+    stroke: #667DD2;
+    stroke-width: 7px;
+    stroke-linecap: round; 
+  }
+
+  /* .create-event-container{
+    margin: 1em 0em 0em 3.6em;
+  } */
+
+
+  @media (min-width: 768px) {
+    
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    
+  }
+  

@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda&family=Merienda+One&family=Puritan:wght@400;700&display=swap");
+
+.title {
+  font-size: x-large;
+}
+.text-area {
+  height: 8.2em;
+}
+.fa-solid-c {
+  padding-right: 2em;
+  color: #667dd2;
+}
+.form-message {
+  color: #667dd2;
+}
+
+.container {
+  padding-top: 3em;
+}
+
+.form-btn {
+  font-family: "Puritan", sans-serif;
+  font-size: large;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.16s;
+  position: relative;
+  top: 0;
+  background: #667dd2;
+  box-shadow: 0px 7px 0px 0px #586db9, 0px 0px 10px 0px rgba(120, 120, 120, 0.4);
+}
+.form-btn:focus {
+  outline: none;
+}
+.form-btn:active {
+  top: 5px;
+  box-shadow: 0px 3px 0px 0px #586db9;
+}
+.cont-input {
+  box-shadow: -7px 7px 11px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border-style: none;
+  border-bottom-style: solid;
+  border-bottom-color: #667dd2;
+  border-bottom-width: 3px;
+  margin-right: 0px;
+}
+
+.contact-form-sec{
+  height: calc(100vh - 240px);
+}
+
+@media (max-width: 767px) {
+  footer {
+    display: none;
+  }
+  .contact-form-sec{
+    margin-top: 3em;
+  }
+  .navbar-brand {
+    margin-top: 0.5em;
+  }
+}
